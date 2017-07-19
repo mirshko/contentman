@@ -1,0 +1,13 @@
+{
+  "name": "contentman",
+  "version": "1.0.0",
+  "description": "Contentful x Middleman",
+  "main": "build/index.html",
+  "author": "Jeff Reiner <theundeadghost@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "middleman contentful -r && middleman server",
+    "build:dev": "middleman contentful -r && middleman build -e development",
+    "build": "middleman contentful -r && middleman build"
+  }
+}

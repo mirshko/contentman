@@ -1,0 +1,22 @@
+---
+title: Welcome to Middleman
+---
+
+<% partial 'partials/logo' %>
+
+<h1>
+  Middleman is Running
+</h1>
+
+<ul>
+  <% data.contentful.post.each do |elem| %>
+    <% p = elem[1] %>
+      <li><a href="/<%= p.slug %>.html"><%= p.title %></a></li>
+  <% end %>
+</ul>
+
+<%= link_to(
+  "Read Documentation",
+  "https://middlemanapp.com/basics/templating_language/",
+  target: "_blank"
+) %>

@@ -1,0 +1,23 @@
+$middleman: #fbc547;
+
+body {
+  background-color: $middleman;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 64px;
+  text-align: center;
+}
+
+a {
+  color: rgba(#000, 0.7);
+
+  &:focus,
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
+.middleman-logo {
+  margin-bottom: 16px;
+  width: 160px;
+}
