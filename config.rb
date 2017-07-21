@@ -6,7 +6,7 @@ activate :dotenv, env: '.env'
 
 # Contentful
 activate :contentful do |f|
-  f.space           = { contentful: 'l0wfd75xlrge' }
+  f.space           = { blog: 'l0wfd75xlrge' }
   f.access_token    = ENV['API_KEY']
   f.use_preview_api = false
   f.cda_query       = { content_type: 'title', include: 1 }
@@ -32,9 +32,10 @@ page '/*.txt', layout: false
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-data.contentful.post.each do |elem|
-  p = elem[1]
-  proxy "/#{p.slug}.html", "/post.html", :locals => { :post => p }, :ignore => true
+if Dir.exist?(File.join(config.data_dir, 'blog'))
+  data.blog.post.each do |id, entry|
+    proxy "/#{entry.slug}.html", "/post.html", locals: { entry: entry }, ignore: true
+  end
 end
 
 # proxy(
