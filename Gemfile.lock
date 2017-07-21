@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/contentful/contentful_middleman.git
+  remote: https://github.com/contentful/contentful_middleman.git
   revision: 0dd21328378bf57ef01649bf331b4c3e8b7de96d
   branch: dl/upgrade-to-v4
   specs:
