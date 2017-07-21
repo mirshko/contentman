@@ -9,5 +9,9 @@ bundle install
 
 # Start Local Dev
 
-yarn start
+npm start
+
+# Build
+
+npm run build
 ```
