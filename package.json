@@ -6,8 +6,7 @@
   "author": "Jeff Reiner <theundeadghost@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "middleman contentful -r && middleman server",
-    "build:dev": "middleman contentful -r && middleman build -e development",
-    "build": "middleman contentful -r && middleman build"
+    "start": "bundle exec middleman contentful --rebuild && bundle exec middleman server",
+    "build": "bundle exec middleman contentful --rebuild && bundle exec middleman build --verbose"
   }
 }
