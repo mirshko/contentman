@@ -8,7 +8,7 @@ activate :dotenv, env: '.env'
 activate :contentful do |f|
   f.space           = { blog: 'l0wfd75xlrge' }
   f.access_token    = ENV['API_KEY']
-  f.use_preview_api = false
+  f.use_preview_api = true
   f.cda_query       = { content_type: 'title', include: 2 }
   f.content_types   = { post: 'title'}
 end
