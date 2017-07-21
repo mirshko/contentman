@@ -9,5 +9,5 @@ bundle install
 
 # Start Local Dev
 
-middleman
+yarn start
 ```
